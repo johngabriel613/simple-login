@@ -1,0 +1,175 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+:root{
+    --bg:#FFC5BF;
+    --primary:#FF968A;
+    --text:#353935;
+    --text2: #A0A0A0;
+    --input-bg:#f2f3f4;
+}
+
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: min(100%, 425px);
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-title{
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.form-title::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--primary);
+    left: 0;
+}
+
+.form-title h1{
+    color: var(--text);
+}
+
+.form-title p{
+    color: var(--text2);
+    font-size: .9rem;
+}
+
+.form-field{
+    display: grid;
+    gap: .8rem;
+}
+
+.form-field-input{
+    position: relative;
+}
+
+input, button{
+    border-radius: 5px;
+    border: 2px solid transparent;
+    outline: none;
+    transition: .3s ease;
+}
+
+.form-field-input input{
+    width: 100%;
+    padding: 20px 13px 5px;
+    background: var(--input-bg);
+    font-size: 1rem;
+}
+
+.form-field-input label{
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    color: var(--text2);
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.form-field-input input:focus{
+    border: 2px solid var(--primary);
+}
+
+.form-field-input input:focus ~ label{
+    color: var(--primary);
+}
+
+.active label{
+    top: 5px;
+    font-size: .8rem;
+}
+
+.hidepass, .showpass{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.2rem;
+    color: var(--text2);
+    cursor: pointer;
+}
+
+.form-field-input a{
+    float: right;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: .9rem;
+    margin-top: 3px;
+}
+
+.divider{
+    display: flex;
+    color: var(--text2);
+    font-size: .9rem;
+}
+
+.divider::before, .divider::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--text2);
+    margin: auto;
+}
+
+.divider::before{
+    margin-right: 10px;
+}
+
+.divider::after{
+    margin-left: 10px;
+}
+
+
+button{
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.primary-btn{
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+}
+
+.primary-btn:hover{
+    background: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.secondary-btn{
+    background: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: 600;
+}
+
+.secondary-btn:hover{
+    background: var(--primary);
+    color: #fff;
+    transition: .3s ease;
+}
+
